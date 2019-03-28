@@ -1,0 +1,14 @@
+{
+  "name": "subtle-crypto-websocket-chat",
+  "version": "1.0.0",
+  "description": "A chat over WebSocket using SubtleCrypto for End-to-End Encryption",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.4",
+    "ws": "^6.2.1"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}

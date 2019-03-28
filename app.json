@@ -1,0 +1,8 @@
+{
+  "name": "SubtleCrypto WebSocket Chat",
+  "description": "A SubtleCrypto-powered End-to-end encrypted WebSocket Chat",
+  "repository": "https://github.com/smigniot/subtle-crypto-websocket-chat",
+  "logo": "https://node-js-sample.herokuapp.com/node.png",
+  "keywords": ["node", "express"]
+}
+

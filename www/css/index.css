@@ -1,0 +1,11 @@
+/* vim: set ts=4 sts=4 sw=4 expandtab : */
+
+html,body { 
+    height: 100%; 
+    margin: 0px;
+    padding: 0px;
+}
+
+.unsafe { color: transparent; }
+.safe { color: inherit; }
+

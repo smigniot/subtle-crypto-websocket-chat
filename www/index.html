@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width" name="viewport" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link rel="stylesheet" type="text/css" href="css/materialize.min.css" />
+        <script type="text/javascript" src="js/materialize.min.js">
+        </script>
+        <script type="text/javascript" src="js/vue.js">
+        </script>
+        <script type="text/javascript" src="js/moment.js">
+        </script>
+        <script type="text/javascript" src="js/chat.js">
+        </script>
+    </head>
+    <body>
+        <main>
+            <nav>
+                <div class="nav-wrapper">
+                    <a href="#" class="brand-logo">&#128571;
+                        {{myhash}}</a>
+                    <ul class="right">
+                        <li><a href="#"><span 
+                            v-bind:class="key_obtained?'safe':'unsafe'"
+                            >&#128273;</span></a></li>
+                        <li><a href="#"><span
+                            v-bind:class="key_announced?'safe':'unsafe'"
+                            >&#9889;</span></a></li>
+                        </ul>
+                </div>
+            </nav>
+            <div class="container">
+                <div class="row">
+                    <div class="input-field col s11">
+                        <input placeholder="Message" type="text" id="message"
+                            onkeyup="if(event.keyCode==13)publish()" />
+                    </div>
+                    <div class="input-field col s1">
+                        <a href="#" class="btn-floating"
+                         style="text-align: center"
+                         onclick="publish()">&#9654;</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s8 m10">
+                        <ul class="collection">
+                            <li v-for="m in messages"
+                                class="collection-item"
+                                ><span class="badge">{{mom(m.when)}}</span>
+                                [{{m.who}}] {{m.text}}</li>
+                        </ul>
+                    </div>
+                    <div class="col s4 m2">
+                        <ul class="collection">
+                            <li v-for="p in participants"
+                                class="collection-item">
+                                <label>
+                                    <input type="checkbox" 
+                                        v-model="p.accepted" />
+                                    <span>{{p.hash}}</span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
+<!-- vim: set ts=4 sw=4 sts=4 expandtab foldmethod=marker : --> 
+
