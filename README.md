@@ -10,7 +10,8 @@
 
 ## Connection steps
 
-* When landing you'll see a nice logo ![logo](doc/1_logo.png)
+* When landing you'll see a nice logo <br> ![logo](doc/1_logo.png)
+* The server is up, you're WebSocket connected <br> ![conn](doc/2_websocketconnected.png)
 
 ## Deploy
 
